@@ -1,0 +1,27 @@
+.TodoList {
+  width: 55vw;
+  height: 50vh;
+  margin-top: 20px;
+  overflow-y: scroll;
+}
+
+/* width */
+.TodoList::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.TodoList::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.TodoList::-webkit-scrollbar-thumb {
+  background: #6f6866;
+  border: 2px solid #6f6866;
+}
+
+/* Handle on hover */
+.TodoList::-webkit-scrollbar-thumb:hover {
+  background: #6f6866;
+}

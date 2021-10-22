@@ -1,0 +1,19 @@
+.TodoListItem {
+  border: 1px solid rgb(236, 236, 236);
+  border-radius: 7px;
+  display: flex;
+  margin: 10px;
+}
+
+.ButtonContainer {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  width: 100px;
+  justify-content: space-between;
+}
+
+.ButtonContainer div {
+  cursor: pointer;
+  height: 35px;
+}

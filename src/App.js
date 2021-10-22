@@ -1,13 +1,43 @@
 import React from 'react';
 import Layout from './containers/Layout/Layout';
-import Todo from './containers/Todo/Todo';
+import Auth from './containers/Auth/Auth';
+import { Switch, Route, Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
+import asycComponent from './hoc/asyncComponent';
 
-const App = () => {
+const asyncTodo = asycComponent(()=>{
+  return import('./containers/Todo/Todo');
+});
+
+const App = (props) => {
+  const authenticated = (
+    <Switch>
+      <Route path='/todoo' component={asyncTodo} />
+      <Redirect to='/todoo' />
+    </Switch>
+  );
+
+  const unauthenticated = (
+    <Switch>
+      <Route path='/auth' component={Auth} />
+      <Redirect to='/auth' />
+    </Switch>
+  );
+
   return (
     <Layout>
-      <Todo />
+      <Switch>
+        {props.token ? authenticated : null}
+        {!props.token ? unauthenticated : null}
+      </Switch>
     </Layout>
   );
 };
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    token: state.auth.token,
+  };
+};
+
+export default connect(mapStateToProps)(App);

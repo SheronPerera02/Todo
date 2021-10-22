@@ -1,0 +1,74 @@
+.Navigation {
+  height: 60px;
+  z-index: 100;
+  background-color: #6f6866;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.Navigation h3 {
+  font-size: 25px;
+  width: max-content;
+  position: absolute;
+  left: 40px;
+  top: calc((60px - 34px) / 2);
+  margin: auto;
+  color: white;
+}
+
+.Container {
+  display: flex;
+  width: max-content;
+  height: 50px;
+  position: absolute;
+  right: 20px;
+  top: 5px;
+}
+
+.ProfilePicture {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ProfilePicture svg {
+  color: white;
+}
+
+.Container p {
+  color: white;
+  margin-right: 5px;
+  font-size: 15px;
+}
+
+.Hamburger {
+  margin-left: 15px;
+  width: 30px;
+  position: relative;
+}
+
+.Hamburger p {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  font-size: 25px;
+  height: 25px;
+  width: max-content;
+  text-align: center;
+  line-height: 18px;
+  transition: 0.5s;
+}
+
+.Hamburger p:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.5s;
+}

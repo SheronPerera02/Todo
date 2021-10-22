@@ -1,0 +1,160 @@
+.Auth {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 200;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.Auth input {
+  background-color: #eee;
+  border: none;
+  outline: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 50%;
+}
+
+.Invalid {
+  box-shadow: 0 0 0 1.7px rgb(243, 165, 165);
+  outline: none;
+  border-radius: 1px;
+}
+
+/* 
+.Auth input:focus{
+  box-shadow: 0 0 0 2px lightcoral;
+  outline: none;
+  border-radius: 1px;
+} */
+
+.MainContainer button {
+  border-radius: 20px;
+  border: 1px solid #6f6866;
+  background-color: #6f6866;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  outline-style: none;
+  cursor: pointer;
+}
+
+.MainContainer {
+  height: 70vh;
+  width: 60vw;
+  position: relative;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.FormContainer {
+  width: 30vw;
+  height: 70vh;
+  position: absolute;
+  transition: 0.5s;
+  left: 0;
+}
+
+.FormContainer .SignInForm {
+  position: absolute;
+  height: 70vh;
+  width: 30vw;
+  z-index: 210;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.FormContainer .SignUpForm {
+  position: absolute;
+  height: 70vh;
+  width: 30vw;
+  z-index: 205;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.PanelContainer {
+  position: absolute;
+  width: 30vw;
+  height: 70vh;
+  transition: 0.5s;
+  right: 0;
+  overflow: hidden;
+  z-index: 220;
+}
+
+.PanelContainer button {
+  background-color: transparent;
+  border-color: white;
+}
+
+.PanelContainer > div {
+  width: max-content;
+  display: flex;
+  position: relative;
+  right: 30vw;
+  transition: 0.5s;
+  background: #ccdad1;
+  background: -webkit-linear-gradient(to right, #9caea9, #ccdad1);
+  background: linear-gradient(to right, #9caea9, #ccdad1);
+}
+
+.PanelContainer .SignUpPanel {
+  height: 70vh;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.PanelContainer .SignInPanel {
+  height: 70vh;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.PanelContainer .SignInPanel p {
+  text-align: center;
+  line-height: 22px;
+}
+
+.SignUpActive_Form {
+  left: 30vw;
+  transition: 0.5s;
+}
+
+.SignUpActive_Panel {
+  right: 30vw;
+  transition: 0.5s;
+}
+
+.SignUpActive_Form .SignUpForm {
+  z-index: 210;
+}
+
+.SignUpActive_Form .SignInForm {
+  z-index: 205;
+}
+
+.SignUpActive_Panel > div {
+  right: 0;
+  transition: 0.5s;
+}

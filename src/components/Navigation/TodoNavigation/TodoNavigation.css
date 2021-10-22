@@ -1,0 +1,24 @@
+.TodoNavigation {
+  position: absolute;
+  width: 350px;
+  background-color: #38302e;
+  right: 0;
+  top: 50px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.TodoNavigation ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  color: white;
+  padding-left: 30px;
+}
+
+.NavLink {
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}

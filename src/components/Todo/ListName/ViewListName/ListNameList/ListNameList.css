@@ -1,0 +1,27 @@
+.ListNameList {
+  width: 27vw;
+  height: 50vh;
+  margin: auto;
+  overflow-y: scroll;
+}
+
+/* width */
+.ListNameList::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.ListNameList::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.ListNameList::-webkit-scrollbar-thumb {
+  background: #6f6866;
+  border: 2px solid #6f6866;
+}
+
+/* Handle on hover */
+.ListNameList::-webkit-scrollbar-thumb:hover {
+  background: #6f6866;
+}
